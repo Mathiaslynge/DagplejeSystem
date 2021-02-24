@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Side Navigation Bar</title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="../galleri.js" defer></script>
+    <link href="../lightbox.min.css" rel="stylesheet" />
+    <script src="lightbox-plus-jquery.min.js"></script>
+
+ 
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2> Sandslottet </h2>
+        <ul>
+            <li><a href='../forside.html' id="Info tavle"><i class="fas fa-info"></i>Info tavle</a></li>
+            <li><a href='../ugeoversigt.html' id="ugeplan"><i class="fas fa-calendar-alt"></i>Ugeplan</a></li>
+            <li><a href='../statistik.html' id="Statistik"><i class="fas fa-chart-bar"></i>Statistik</a></li>
+            <li><a href='../galleri.html' id=""><i class="fas fa-camera"></i>Galleri</a></li>
+             <li><a href='../message.html' id="message"><i class="fas fa-envelope"></i> Indbakke</a></li>
+            <li id="liProfil"><a href='../profil.html' id="Profil"><i class="fas fa-id-badge"></i>Profil</a></li>
+            <li><a href='loginBruger/Endsession' id="logud"><i class="fas fa-sign-out-alt"></i> Log ud</a></li>
+            <img src="../uploads/logo.png" id="logo">
+
+        </ul> 
+    </div> 
+
+        <div class="main_content" id ="joky">
+            <div class="header" id="header">ugeoversigt</div>  
+            <div class="info" id="info"></div>
+            <div class ="galleri">
+                <input type="date" id="datepicker" name="billeder"
+                     value="null"
+                    min="2020-11-30" max="2025-12-31">
+                
+                <form action="galleri/uploadimage" enctype="multipart/form-data" method="POST">
+                    <input id="image" type="file" name="image" accept="image/*" />
+                    <input id="button" type="submit" value="Upload an Image"/>
+                  </form>
+                    </div>
+                    <div class="upload" id="uploadedpics"></div>
+
+                  </div>
+    </body>
+
+    </html>

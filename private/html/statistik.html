@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="../statistik.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper"> 
+    <div class="sidebar">
+        <h2> Sandslottet </h2>
+        <ul>
+            <li><a href='../forside.html' id="Info tavle"><i class="fas fa-info"></i>Info tavle</a></li>
+            <li><a href='../ugeoversigt.html' id="ugeplan"><i class="fas fa-calendar-alt"></i>Ugeplan</a></li>
+            <li><a href='../statistik.html' id="Statistik"><i class="fas fa-chart-bar"></i>Statistik</a></li>
+            <li><a href='../galleri.html' id=""><i class="fas fa-camera"></i>Galleri</a></li>
+             <li><a href='../message.html' id="message"><i class="fas fa-envelope"></i> Indbakke</a></li>
+            <li id="liProfil"><a href='../profil.html' id="Profil"><i class="fas fa-id-badge"></i>Profil</a></li>
+            <li><a href='loginBruger/Endsession' id="logud"><i class="fas fa-sign-out-alt"></i> Log ud</a></li>
+            <img src="../uploads/logo.png" id="logo">
+
+        </ul> 
+        </div> 
+    <div class="main_content" id ="joky">
+        <div class="header" id="header">Statistik</div>  
+        <div class="info" id="info"></div>
+        <div class="statistik">
+        
+        <label for="ugeSelectFra" id="ugeFra"> Uge nr. fra</label>
+        <select name="" id="ugefraSelect">
+        </select>
+        <label for="ugeSelectTil" id="ugeTil"> Uge nr. til</label>
+        <select name="" id="ugeTilSelect">
+        </select>
+        <label for="barnSelect" id="barnStatistikLBL"> Vælg et barn</label>
+        <select name="" id="barnStatistikSelect">
+        </select>
+        <label for="statistikType" id="statistikType"> Vælg statistik</label>
+        <select name="" id="statistikselect"> 
+            <option value=1>Antal syge dage</option>
+            <option value=2>Ferieoversigt for alle børn</option>
+            <option value=3>Gennemsnitlig søvn pr. dag</option>
+            <option value=4>Antal time i dagplejen pr uge</option>
+        </select>
+        <button type="submit" id="visStatistik">Vis</button>
+
+       <div class="statistik" id="statistik">
+        <label for="" id="sygedage"></label>
+        </div>
+
+        <div id="feriestat">
+        <table>
+            
+            <tr>
+                <th>Ferieoversigt</th>
+                <th>Mandag</th>
+                <th>Tirsdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th>
+            </tr>
+            <td>
+                <div class="dag" id="ugenrstat"></div>
+                
+            </td>
+            <td>
+                <div class="dag" id='mandagstat'>
+                    
+            </td>
+            <td>
+                <div class="dag" id='tirsdagstat'>
+                    
+            </td>
+            <td>
+                <div class="dag" id='onsdagstat'>
+            </td>
+            <td>
+                <div class="dag" id='torsdagstat'>
+            </td>
+            <td>
+                <div class="dag" id='fredagstat'>
+            </td>
+
+        </table>
+       </div>
+        </body>
+        </html>

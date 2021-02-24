@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="../forside.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2> Sandslottet </h2>
+        <ul>
+            <li><a href='../forside.html' id="Info tavle"><i class="fas fa-info"></i>Info tavle</a></li>
+            <li><a href='../ugeoversigt.html' id="ugeplan"><i class="fas fa-calendar-alt"></i>Ugeplan</a></li>
+            <li><a href='../statistik.html' id="Statistik"><i class="fas fa-chart-bar"></i>Statistik</a></li>
+            <li><a href='../galleri.html' id=""><i class="fas fa-camera"></i>Galleri</a></li>
+             <li><a href='../message.html' id="message"><i class="fas fa-envelope"></i> Indbakke</a></li>
+            <li id="liProfil"><a href='../profil.html' id="Profil"><i class="fas fa-id-badge"></i>Profil</a></li>
+            <li><a href='../loginBruger/Endsession' id="logud"><i class="fas fa-sign-out-alt"></i> Log ud</a></li>
+            <img src="../uploads/logo.png" id="logo">
+
+        </ul> 
+        </div> 
+    <div class="main_content" id ="joky">
+        <div class="header" id="header">Infotavle</div>
+        <div class="info" id="info"></div>
+
+        <textarea readonly id="oversigt" cols="50" rows="20" style="font-size: 16pt; resize: none;">
+            
+        </textarea><br>
+
+        <button type="submit" id="rediger">Rediger tekst</button>
+        <button type="submit" id="gemtekst">Gem</button> 
+        <div> <br>
+            <label for="" id="tavlegemt"></label>
+        </div>
+        </div>
+        
+        
+
+    </body>
+    </html>

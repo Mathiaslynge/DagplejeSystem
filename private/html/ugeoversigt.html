@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="../ugeoversigt.js" defer></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2> Sandslottet </h2>
+        <ul>
+            <li><a href='../forside.html' id="Info tavle"><i class="fas fa-info"></i>Info tavle</a></li>
+            <li><a href='../ugeoversigt.html' id="ugeplan"><i class="fas fa-calendar-alt"></i>Ugeplan</a></li>
+            <li><a href='../statistik.html' id="Statistik"><i class="fas fa-chart-bar"></i>Statistik</a></li>
+            <li><a href='../galleri.html' id=""><i class="fas fa-camera"></i>Galleri</a></li>
+             <li><a href='../message.html' id="message"><i class="fas fa-envelope"></i> Indbakke</a></li>
+            <li id="liProfil"><a href='../profil.html' id="Profil"><i class="fas fa-id-badge"></i>Profil</a></li>
+            <li><a href='loginBruger/Endsession' id="logud"><i class="fas fa-sign-out-alt"></i> Log ud</a></li>
+            <img src="../uploads/logo.png" id="logo">
+
+        </ul> 
+        </div> 
+    <div class="main_content" id ="joky">
+        <div class="header" id="header">ugeoversigt</div>  
+        <div class="info" id="info"></div>
+        <div>
+
+        <button type="submit" id="gem">Gem</button>
+        <label for="ugeSelect" id="ugenrLBL"> Uge nr.</label>
+        <select name="" id="ugeSelect">
+        </select>
+        <label for="barnSelect" id="barnLBL"> Vælg et barn</label>
+        <select name="" id="barnSelect">
+        </select>
+    </div>
+     
+   
+    <div class="ugedage">
+        
+        <table>
+            
+    <tr>
+        <th>Navn</th>
+        <th>Mandag</th>
+        <th>Tirsdag</th>
+        <th>Onsdag</th>
+        <th>Torsdag</th>
+        <th>Fredag</th>
+    </tr>
+    <td><label for="" id="Navn">Navn</label> <br/></td>
+    
+    <td>
+        <div class="dag" id='mandag'>
+        <label for="ankomstMandag">Ankomst:</label>
+            <input type="time" id="AnkomstMandag" name="ankomstMandag"
+            min="06:00" max="12:00" required>
+            
+            <label for="HentesMandag">Hentes:</label>
+            <input type="time" id="HentesMandag" name="HentesMandag"
+            min="12:00" max="18:00" required>
+
+            <label for="sovetfraMandag">Sovet fra:</label>
+            <input type="time" id="sovetfraMandag" name="sovetfraMandag"
+            min="08:00" max="16:00" required>
+
+            <label for="sovettilMandag">Sovet til:</label>
+            <input type="time" id="sovettilMandag" name="sovettilMandag"
+            min="08:00" max="16:00" required>
+        
+            
+            <label for="sygCBMandag">Syg</label> 
+            <input type="checkbox" name="sygCBMandag" id="sygCBMandag"> 
+            <label for="ferieCBMandag">Ferie/fri</label>  
+            <input type="checkbox" name="ferieCBMandag" id="ferieCBMandag"> 
+            <label for="kommentarmandag">Kommentar</label>
+            <textarea name="" id="kommentarmandag"></textarea>
+        </div>
+        
+    </td>
+    <td>
+        <div class="dag" id='tirsdag'>
+        <label for="ankomstTirsdag">Ankomst:</label>
+            <input type="time" id="AnkomstTirsdag" name="ankomstTirsdag"
+            min="06:00" max="12:00" required> 
+            
+            <label for="HentesTirsdag">Hentes:</label>
+            <input type="time" id="HentesTirsdag" name="HentesTirsdag"
+            min="12:00" max="18:00" required>
+
+            <label for="sovetfraTirsdag">Sovet fra:</label>
+            <input type="time" id="sovetfraTirsdag" name="sovetfraTirsdag"
+            min="08:00" max="16:00" required>
+
+            <label for="sovettilTirsdag">Sovet til:</label>
+            <input type="time" id="sovettilTirsdag" name="sovettilTirsdag"
+            min="08:00" max="16:00" required> 
+      
+            <label for="sygCBTirsdag">Syg</label> 
+            <input type="checkbox" name="sygCBTirsdag" id="sygCBTirsdag"> 
+            <label for="ferieCBTirsdag">Ferie/fri</label>  
+            <input type="checkbox" name="ferieCBTirsdag" id="ferieCBTirsdag"> 
+            <label for="kommentartirsdag">Kommentar</label>
+            <textarea name="" id="kommentartirsdag"></textarea>
+        </div>
+    </td>
+    <td>
+        <div class="dag" id='onsdag'>
+        <label for="ankomstOnsdag">Ankomst:</label>
+            <input type="time" id="AnkomstOnsdag" name="ankomstOnsdag"
+            min="06:00" max="12:00" required> 
+            
+            <label for="HentesOnsdag">Hentes:</label>
+            <input type="time" id="HentesOnsdag" name="HentesOnsdag"
+            min="12:00" max="18:00" required>
+
+            <label for="sovetfraOnsdag">Sovet fra:</label>
+            <input type="time" id="sovetfraOnsdag" name="sovetfraOnsdag"
+            min="08:00" max="16:00" required>
+
+            <label for="sovettilOnsdag">Sovet til:</label>
+            <input type="time" id="sovettilOnsdag" name="sovettilOnsdag"
+            min="08:00" max="16:00" required> 
+            
+            <label for="sygCBOnsdag">Syg</label> 
+            <input type="checkbox" name="sygCBOnsdag" id="sygCBOnsdag"> 
+            <label for="ferieCBOnsdag">Ferie/fri</label>  
+            <input type="checkbox" name="ferieCBOnsdag" id="ferieCBOnsdag">
+            <label for="kommentaronsdag">Kommentar</label>
+            <textarea name="" id="kommentaronsdag"></textarea>
+        </div>
+    </td>
+    <td>
+        <div class="dag" id=torsdag>
+        <label for="ankomstTorsdag">Ankomst:</label>
+            <input type="time" id="AnkomstTorsdag" name="ankomstTorsdag"
+            min="06:00" max="12:00" required> 
+            
+            <label for="HentesTorsdag">Hentes:</label>
+            <input type="time" id="HentesTorsdag" name="HentesTorsdag"
+            min="12:00" max="18:00" required>
+
+            <label for="sovetfraTorsdag">Sovet fra:</label>
+            <input type="time" id="sovetfraTorsdag" name="sovetfraTorsdag"
+            min="08:00" max="16:00" required>
+
+            <label for="sovettilTorsdag">Sovet til:</label>
+            <input type="time" id="sovettilTorsdag" name="sovettilTorsdag"
+            min="08:00" max="16:00" required> 
+            
+            <label for="sygCBTorsdag">Syg</label> 
+            <input type="checkbox" name="sygCBTorsdag" id="sygCBTorsdag"> 
+            <label for="ferieCBTorsdag">Ferie/fri</label>  
+            <input type="checkbox" name="ferieCBTorsdag" id="ferieCBTorsdag"> 
+            <label for="kommentartorsdag">Kommentar</label>
+            <textarea name="" id="kommentartorsdag"></textarea>
+        </div>
+    </td>
+    <td>
+        <div class="dag" id=fredag>
+        <label for="ankomstFredag">Ankomst:</label>
+            <input type="time" id="AnkomstFredag" name="ankomstFredag"
+            min="06:00" max="12:00" required> 
+            
+            <label for="HentesFredag">Hentes:</label>
+            <input type="time" id="HentesFredag" name="HentesFredag"
+            min="12:00" max="18:00" required>
+
+            <label for="sovetfraFredag">Sovet fra:</label>
+            <input type="time" id="sovetfraFredag" name="sovetfraFredag"
+            min="08:00" max="16:00" required>
+
+            <label for="sovettilFredag">Sovet til:</label>
+            <input type="time" id="sovettilFredag" name="sovettilFredag"
+            min="08:00" max="16:00" required> 
+            
+            <label for="sygCBFredag">Syg</label> 
+            <input type="checkbox" name="sygCBFredag" id="sygCBFredag"> 
+            <label for="ferieCBFredag">Ferie/fri</label>  
+            <input type="checkbox" name="ferieCBFredag" id="ferieCBFredag"> 
+            <label for="kommentarfredag">Kommentar</label>
+            <textarea name="" id="kommentarfredag"></textarea>
+        </div> 
+    </td>
+
+</div> <br>
+</table>
+<label for="" id="okUgeplan"></label>
+
+</div> 
+</body>
+</html>
